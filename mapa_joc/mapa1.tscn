@@ -3,7 +3,7 @@
 [ext_resource path="res://mapa1.gd" type="Script" id=1]
 [ext_resource path="res://green_background.jpg" type="Texture" id=2]
 [ext_resource path="res://tilemapdelmapa.tres" type="TileSet" id=3]
-[ext_resource path="res://JOC/KinematicBody2D.tscn" type="PackedScene" id=4]
+[ext_resource path="res://KinematicBody2D.tscn" type="PackedScene" id=4]
 [ext_resource path="res://platformergraphics-buildings/Tiles/rockMoss.png" type="Texture" id=5]
 [ext_resource path="res://kenney_topdowntanksredux/PNG/Default size/barrelRust_top.png" type="Texture" id=6]
 [ext_resource path="res://Trampa.tscn" type="PackedScene" id=7]
@@ -11,6 +11,7 @@
 [ext_resource path="res://fons_negre.png" type="Texture" id=9]
 [ext_resource path="res://Super Bomberman Boss(Super Bomberman Remix Medley).ogg" type="AudioStream" id=10]
 [ext_resource path="res://musica.gd" type="Script" id=11]
+
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
