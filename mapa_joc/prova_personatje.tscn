@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprite.gd" type="Script" id=1]
+[ext_resource path="res://treeGreen_large.png" type="Texture" id=2]
+
+[node name="Personatge" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 115.949, 74.8952 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 115.949, 74.8952 )
+scale = Vector2( 0.4, 0.4 )
+polygon = PoolVector2Array( -1.78313, -31.1655, -8.44048, -28.9463, -18.9813, -27.8368, -25.916, -23.1212, -28.1351, -19.2377, -30.3543, -10.916, -30.3543, -5.64561, -32.296, -1.48477, -32.5734, 6.28214, -31.1864, 8.77864, -28.9673, 16.2682, -27.8577, 20.1516, -23.9743, 23.7577, -18.1491, 27.6411, -11.7691, 28.7507, -7.8857, 29.0281, -4.00224, 32.6341, 4.87423, 32.9115, 8.48029, 28.1959, 13.7507, 30.415, 19.5759, 26.809, 28.1749, 22.0933, 28.1749, 13.7717, 29.0071, 8.22386, 31.5036, 3.23085, 30.9488, -3.98128, 28.7297, -8.97429, 28.4523, -15.0769, 26.2332, -23.1212, 19.0211, -27.8368, 14.3055, -29.7785, 8.2029, -28.9463, 3.76466, -31.7202 )

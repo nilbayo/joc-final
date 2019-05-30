@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Destral.gd" type="Script" id=1]
+[ext_resource path="res://voxel-pack/PNG/Items/axe_diamond.png" type="Texture" id=2]
+
+[node name="Destral" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.211182, 0.298889 )
+scale = Vector2( 0.157581, 0.155205 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -8.67657, 6.32287, -8.06189, 7.34735, -0.525085, -1.52408, 0.468933, -0.887245, 0.970093, -1.05615, 1.60413, 0.596855, 2.27417, 2.67073, 4.33429, 3.04453, 6.30847, 1.87883, 7.72058, -0.0981445, 8.13867, -2.71194, 6.46075, -2.63718, 3.20459, -3.73363, 3.54236, -4.47292, 2.8833, -4.94363, 3.45099, -5.94318, 1.60138, -7.20578, 0.98114, -6.41942, -0.0932007, -6.92336, -2.83154, -3.17155, -1.9649, -2.68423 )
+__meta__ = {
+"_edit_group_": true
+}

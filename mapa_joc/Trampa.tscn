@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Area2D.gd" type="Script" id=1]
+
+[node name="Trampa" type="Area2D"]
+position = Vector2( 449.64, 501.191 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -6.34622, -7.50418, -6.71429, 11.0824, 13.7125, 11.0824, 13.5285, -6.95212, 6.90359, -7.32016 )
+[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]

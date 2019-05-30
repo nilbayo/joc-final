@@ -1,0 +1,706 @@
+[gd_scene load_steps=52 format=2]
+
+[ext_resource path="res://mapa3.gd" type="Script" id=1]
+[ext_resource path="res://green_background.jpg" type="Texture" id=2]
+[ext_resource path="res://treeGreen_large.png" type="Texture" id=3]
+[ext_resource path="res://platformergraphics-buildings/Tiles/houseBeigeTopLeft.png" type="Texture" id=4]
+[ext_resource path="res://platformergraphics-buildings/Tiles/houseBeigeTopMid.png" type="Texture" id=5]
+[ext_resource path="res://platformergraphics-buildings/Tiles/houseBeigeTopRight.png" type="Texture" id=6]
+[ext_resource path="res://platformergraphics-buildings/Tiles/houseBeigeMidRight.png" type="Texture" id=7]
+[ext_resource path="res://kenney_topdowntanksredux/PNG/Retina/treeBrown_large.png" type="Texture" id=8]
+[ext_resource path="res://kenney_topdowntanksredux/PNG/Retina/treeBrown_small.png" type="Texture" id=9]
+[ext_resource path="res://kenney_topdowntanksredux/PNG/Retina/tank_sand.png" type="Texture" id=10]
+[ext_resource path="res://kenney_topdowntanksredux/PNG/Retina/fenceYellow.png" type="Texture" id=11]
+[ext_resource path="res://kenney_topdowntanksredux/PNG/Retina/sandbagBrown.png" type="Texture" id=12]
+[ext_resource path="res://platformergraphics-buildings/Tiles/houseBeigeAlt2.png" type="Texture" id=13]
+[ext_resource path="res://platformergraphics-buildings/Tiles/houseBeigeAlt.png" type="Texture" id=14]
+[ext_resource path="res://platformergraphics-buildings/Tiles/houseBeige.png" type="Texture" id=15]
+[ext_resource path="res://platformergraphics-buildings/Tiles/houseBeigeBottomLeft.png" type="Texture" id=16]
+[ext_resource path="res://platformergraphics-buildings/Tiles/houseBeigeBottomMid.png" type="Texture" id=17]
+[ext_resource path="res://platformergraphics-buildings/Tiles/houseBeigeBottomRight.png" type="Texture" id=18]
+[ext_resource path="res://platformergraphics-buildings/Tiles/houseBeigeMidLeft.png" type="Texture" id=19]
+[ext_resource path="res://KinematicBody2D.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Destral.tscn" type="PackedScene" id=21]
+[ext_resource path="res://kenney_topdowntanksredux/PNG/Retina/barrelRust_top.png" type="Texture" id=22]
+[ext_resource path="res://kenney_topdowntanksredux/PNG/Retina/fenceRed.png" type="Texture" id=23]
+[ext_resource path="res://kenney_topdowntanksredux/PNG/Retina/tank_dark.png" type="Texture" id=24]
+[ext_resource path="res://Trampa.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Final.gd" type="Script" id=26]
+[ext_resource path="res://fons_negre.png" type="Texture" id=27]
+[ext_resource path="res://Super Bomberman Boss(Super Bomberman Remix Medley).ogg" type="AudioStream" id=28]
+[ext_resource path="res://musica.gd" type="Script" id=29]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 14, 3, 37, 1, 53, 6, 60, 18, 60, 34, 61, 51, 47, 56, 27, 61, 13, 62, 4, 51, 1, 35, 3, 19 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 14, 14, 64, 1, 112, 9, 129, 66, 116, 120, 18, 125, -3, 65 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 12, 6, 36, -1, 59, 11, 68, 30, 68, 46, 62, 60, 43, 70, 25, 69, 9, 60, 0, 41, -1, 26, 11, 3 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 5, 12, 5, 2, 19, 1, 28, 6, 72, 7, 76, 1, 90, 3, 102, 7, 101, 21, 94, 24, 92, 30, 80, 29, 77, 23, 23, 23, 23, 32, 6, 30, 5, 23 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PoolVector2Array( 1, 40, -1, 2, 65, 1, 62, 42 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
+
+[sub_resource type="TileSet" id=18]
+0/name = "treeGreen_large.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 70, 70 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "treeGreen_large.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 70, 70 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shapes = [  ]
+1/z_index = 0
+2/name = "houseBeigeAlt2.png 2"
+2/texture = ExtResource( 13 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 70, 70 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 10 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "houseBeigeAlt.png 3"
+3/texture = ExtResource( 14 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 70, 70 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "houseBeige.png 4"
+4/texture = ExtResource( 15 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 70, 70 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "houseBeigeBottomLeft.png 5"
+5/texture = ExtResource( 16 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 70, 70 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "houseBeigeBottomMid.png 6"
+6/texture = ExtResource( 17 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 70, 70 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 14 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+7/name = "houseBeigeBottomRight.png 7"
+7/texture = ExtResource( 18 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 70, 70 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+8/name = "houseBeigeMidLeft.png 8"
+8/texture = ExtResource( 19 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 70, 70 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+8/z_index = 0
+9/name = "houseBeigeMidRight.png 9"
+9/texture = ExtResource( 7 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 70, 70 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 17 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+9/z_index = 0
+10/name = "houseBeigeTopLeft.png 10"
+10/texture = ExtResource( 4 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 70, 70 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+10/z_index = 0
+11/name = "houseBeigeTopMid.png 11"
+11/texture = ExtResource( 5 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 70, 70 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+11/z_index = 0
+12/name = "houseBeigeTopRight.png 12"
+12/texture = ExtResource( 6 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 0, 70, 70 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+12/z_index = 0
+13/name = "houseBeigeMidRight.png 13"
+13/texture = ExtResource( 7 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 70, 70 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shapes = [  ]
+13/z_index = 0
+14/name = "houseBeigeTopRight.png 14"
+14/texture = ExtResource( 6 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, -70, 70, 70 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shapes = [  ]
+14/z_index = 0
+15/name = "treeBrown_large.png 15"
+15/texture = ExtResource( 8 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 130, 130 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+15/z_index = 0
+16/name = "treeBrown_small.png 16"
+16/texture = ExtResource( 9 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 70, 70 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+16/z_index = 0
+17/name = "tank_sand.png 17"
+17/texture = ExtResource( 10 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 0, 0, 70, 70 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shapes = [  ]
+17/z_index = 0
+18/name = "fenceYellow.png 18"
+18/texture = ExtResource( 11 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 0, 0, 110, 40 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+18/z_index = 0
+19/name = "sandbagBrown.png 19"
+19/texture = ExtResource( 12 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 0, 0, 70, 50 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+19/z_index = 0
+
+[sub_resource type="Curve2D" id=19]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 728.576, 299.578, 0, 0, 0, 0, 728.576, 299.578, 0, 0, 0, 0, 727.996, 297.792, 0, 0, 0, 0, 727.021, 549.431, 0, 0, 0, 0, 713.366, 550.407, 0, 0, 0, 0, 708.001, 401.179, 0, 0, 0, 0, 653.87, 395.327, 0, 0, 0, 0, 660.697, 303.156, 0, 0, 0, 0, 728.011, 297.776, 0, 0, 0, 0, 728.576, 299.578 )
+}
+
+[sub_resource type="GDScript" id=20]
+script/source = "extends PathFollow2D
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+func _process(delta):
+	offset += (200*delta)
+	
+"
+
+[sub_resource type="Curve2D" id=21]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 751.907, 56.4215, 0, 0, 0, 0, 765.416, 55.3408, 0, 0, 0, 0, 768.118, 135.854, 0, 0, 0, 0, 731.374, 131.531, 0, 0, 0, 0, 729.212, 164.493, 0, 0, 0, 0, 717.865, 164.493, 0, 0, 0, 0, 713.542, 87.2219, 0, 0, 0, 0, 744.883, 85.6008, 0, 0, 0, 0, 751.367, 55.3408, 0, 0, 0, 0, 751.907, 56.4215 )
+}
+
+[sub_resource type="GDScript" id=22]
+script/source = "extends PathFollow2D
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+func _process(delta):
+	offset += (200*delta)
+"
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 513.838, 298.523 )
+scale = Vector2( 1.67275, 1.29985 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.7, 0.7 )
+tile_set = SubResource( 18 )
+cell_size = Vector2( 50, 50 )
+format = 1
+tile_data = PoolIntArray( 0, 6, 0, 1, 6, 0, 2, 6, 0, 3, 6, 0, 4, 6, 0, 5, 6, 0, 6, 6, 0, 7, 6, 0, 8, 6, 0, 9, 6, 0, 10, 6, 0, 11, 6, 0, 12, 6, 0, 13, 6, 0, 14, 6, 0, 15, 6, 0, 16, 6, 0, 17, 6, 0, 18, 6, 0, 19, 6, 0, 20, 6, 0, 21, 6, 0, 22, 6, 0, 23, 6, 0, 24, 6, 0, 25, 6, 0, 26, 6, 0, 27, 6, 0, 28, 6, 0, 65536, 1610612746, 0, 65540, 1610612755, 0, 65546, 0, 0, 65547, 0, 0, 65551, 0, 0, 65552, 0, 0, 65553, 0, 0, 65554, 0, 0, 65555, 0, 0, 65556, 0, 0, 65558, 0, 0, 65559, 0, 0, 65560, 0, 0, 65564, 1073741834, 0, 131072, 1610612746, 0, 131083, 0, 0, 131084, 0, 0, 131094, 0, 0, 131095, 0, 0, 131096, 0, 0, 131100, 1073741834, 0, 196608, 1610612746, 0, 196609, -536870893, 0, 196610, -536870893, 0, 196612, 1610612743, 0, 196613, 1073741831, 0, 196620, 0, 0, 196622, 0, 0, 196623, 0, 0, 196624, 0, 0, 196625, 0, 0, 196626, 0, 0, 196627, 0, 0, 196632, 0, 0, 196636, 1073741834, 0, 262144, 1610612746, 0, 262148, 536870921, 0, 262149, 536870922, 0, 262154, 0, 0, 262163, 0, 0, 262165, 0, 0, 262166, 0, 0, 262170, 0, 0, 262172, 1073741834, 0, 327680, 1610612746, 0, 327684, 536870921, 0, 327685, 536870922, 0, 327690, 0, 0, 327691, 0, 0, 327694, 0, 0, 327695, 0, 0, 327696, 0, 0, 327699, 0, 0, 327701, 0, 0, 327702, 0, 0, 327703, 0, 0, 327706, 0, 0, 327708, 1073741834, 0, 393216, 1610612746, 0, 393220, 536870921, 0, 393221, 536870922, 0, 393227, 0, 0, 393228, 0, 0, 393230, 0, 0, 393231, 0, 0, 393232, 0, 0, 393235, 0, 0, 393237, 0, 0, 393241, 0, 0, 393242, 0, 0, 393244, 1073741834, 0, 458752, 1610612746, 0, 458756, 536870921, 0, 458757, 536870922, 0, 458763, 0, 0, 458764, 0, 0, 458766, 0, 0, 458767, 0, 0, 458768, 0, 0, 458771, 0, 0, 458772, 0, 0, 458773, 0, 0, 458774, 0, 0, 458777, 0, 0, 458780, 1073741834, 0, 524288, 1610612746, 0, 524292, 536870919, 0, 524293, 7, 0, 524299, 0, 0, 524302, 1610612743, 0, 524303, 1073741830, 0, 524304, 1073741830, 0, 524305, 1073741831, 0, 524316, 1073741834, 0, 589824, 1610612746, 0, 589835, 0, 0, 589836, 0, 0, 589838, 536870925, 0, 589839, 2, 0, 589840, 1073741826, 0, 589841, 12, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0, 589852, 1073741834, 0, 655360, 1610612746, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655369, 0, 0, 655374, 536870919, 0, 655375, 6, 0, 655376, 6, 0, 655377, 7, 0, 655381, 0, 0, 655388, 1073741834, 0, 720896, 1610612746, 0, 720904, 0, 0, 720905, 0, 0, 720908, 0, 0, 720909, 0, 0, 720910, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 0, 0, 720919, 0, 0, 720920, 0, 0, 720921, 0, 0, 720922, 0, 0, 720924, 1073741834, 0, 786432, 1610612746, 0, 786440, 0, 0, 786443, 0, 0, 786444, 0, 0, 786453, 0, 0, 786455, 0, 0, 786460, 1073741834, 0, 851968, 1610612746, 0, 851978, 0, 0, 851984, 0, 0, 851989, 0, 0, 851993, 0, 0, 851994, 0, 0, 851995, 0, 0, 851996, 1073741834, 0, 917504, 1610612746, 0, 917516, 0, 0, 917517, 0, 0, 917520, 0, 0, 917525, 0, 0, 917527, 0, 0, 917529, 0, 0, 917531, 0, 0, 917532, 1073741834, 0, 983040, 1610612746, 0, 983046, 0, 0, 983047, 0, 0, 983048, 0, 0, 983049, 0, 0, 983050, 0, 0, 983051, 0, 0, 983052, 0, 0, 983053, 0, 0, 983054, 0, 0, 983055, 0, 0, 983056, 0, 0, 983057, 0, 0, 983058, 0, 0, 983063, 0, 0, 983067, 0, 0, 983068, 1073741834, 0, 1048576, 7, 0, 1048577, 6, 0, 1048578, 6, 0, 1048579, 6, 0, 1048580, 6, 0, 1048581, 6, 0, 1048582, 6, 0, 1048583, 6, 0, 1048584, 6, 0, 1048585, 6, 0, 1048586, 6, 0, 1048587, 6, 0, 1048588, 6, 0, 1048589, 6, 0, 1048590, 6, 0, 1048591, 6, 0, 1048592, 6, 0, 1048593, 6, 0, 1048594, 6, 0, 1048595, 6, 0, 1048596, 6, 0, 1048597, 6, 0, 1048598, 6, 0, 1048599, 6, 0, 1048600, 6, 0, 1048601, 6, 0, 1048602, 6, 0, 1048603, 6, 0, 1048604, 6, 0 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 20 )]
+position = Vector2( 75, 68 )
+scale = Vector2( 0.4, 0.4 )
+collision_layer = 2
+collision_mask = 5
+
+[node name="Destral1" type="Path2D" parent="."]
+curve = SubResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Destral1"]
+position = Vector2( 728.576, 299.578 )
+rotation = 1.70201
+script = SubResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Destral" parent="Destral1/PathFollow2D" instance=ExtResource( 21 )]
+
+[node name="Destral2" type="Path2D" parent="."]
+editor/display_folded = true
+curve = SubResource( 21 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Destral2"]
+editor/display_folded = true
+position = Vector2( 751.907, 56.4215 )
+rotation = -0.079825
+script = SubResource( 22 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Destral" parent="Destral2/PathFollow2D" instance=ExtResource( 21 )]
+
+[node name="barril" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 310.515, 233.174 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="barril"]
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="barril"]
+polygon = PoolVector2Array( -17.3613, -17.2326, -25.164, -2.6024, -20.775, 12.0278, -14.4352, 19.3429, -7.1201, 23.2443, 4.58407, 23.2443, 16.7759, 17.8799, 23.6033, 6.6634, 23.6033, -2.6024, 18.7266, -13.8189, 7.99779, -22.1094, -3.21871, -24.5477 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="barril2" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 334.957, 240.856 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="barril2"]
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="barril2"]
+polygon = PoolVector2Array( -17.3613, -17.2326, -25.164, -2.6024, -20.775, 12.0278, -14.4352, 19.3429, -7.1201, 23.2443, 4.58407, 23.2443, 16.7759, 17.8799, 23.6033, 6.6634, 23.6033, -2.6024, 18.7266, -13.8189, 7.99779, -22.1094, -3.21871, -24.5477 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="barril3" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 335.655, 265.298 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="barril3"]
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="barril3"]
+polygon = PoolVector2Array( -17.3613, -17.2326, -25.164, -2.6024, -20.775, 12.0278, -14.4352, 19.3429, -7.1201, 23.2443, 4.58407, 23.2443, 16.7759, 17.8799, 23.6033, 6.6634, 23.6033, -2.6024, 18.7266, -13.8189, 7.99779, -22.1094, -3.21871, -24.5477 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tanca" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 176.7, 434.149 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Tanca"]
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tanca"]
+polygon = PoolVector2Array( -39.0219, -15.26, -40.2513, -7.57611, -47.3205, -7.26876, -47.9352, 7.48434, -40.866, 8.09905, -39.6366, 16.0903, -23.9614, 16.0903, -24.8835, 7.17698, 23.3714, 7.48434, 23.9862, 14.8609, 38.4319, 15.4756, 39.6613, 7.48434, 47.9599, 8.4064, 47.0379, -7.88347, 39.9687, -8.49818, 39.354, -15.5674, 23.9862, -16.4894, 23.9862, -9.1129, -23.0393, -9.42025, -23.654, -16.1821 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tanca2" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 161.5, 462.649 )
+rotation = 0.722102
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Tanca2"]
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tanca2"]
+polygon = PoolVector2Array( -39.0219, -15.26, -40.2513, -7.57611, -47.3205, -7.26876, -47.9352, 7.48434, -40.866, 8.09905, -39.6366, 16.0903, -23.9614, 16.0903, -24.8835, 7.17698, 23.3714, 7.48434, 23.9862, 14.8609, 38.4319, 15.4756, 39.6613, 7.48434, 47.9599, 8.4064, 47.0379, -7.88347, 39.9687, -8.49818, 39.354, -15.5674, 23.9862, -16.4894, 23.9862, -9.1129, -23.0393, -9.42025, -23.654, -16.1821 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tanca3" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 204.6, 446.522 )
+rotation = -0.896231
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Tanca3"]
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tanca3"]
+polygon = PoolVector2Array( -39.0219, -15.26, -40.2513, -7.57611, -47.3205, -7.26876, -47.9352, 7.48434, -40.866, 8.09905, -39.6366, 16.0903, -23.9614, 16.0903, -24.8835, 7.17698, 23.3714, 7.48434, 23.9862, 14.8609, 38.4319, 15.4756, 39.6613, 7.48434, 47.9599, 8.4064, 47.0379, -7.88347, 39.9687, -8.49818, 39.354, -15.5674, 23.9862, -16.4894, 23.9862, -9.1129, -23.0393, -9.42025, -23.654, -16.1821 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tanc" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 669.296, 451.852 )
+rotation = 0.555187
+scale = Vector2( 0.6, 0.6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Tanc"]
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tanc"]
+polygon = PoolVector2Array( -37.7422, -41.331, -42.1115, -34.1812, -41.7143, 23.8117, -36.5506, 29.7699, -26.6203, 29.7699, -17.8816, 34.5364, -12.3206, 33.742, -11.5262, 45.2612, 11.9093, 44.864, 11.5121, 34.1392, 19.0591, 34.1392, 27.0034, 29.3727, 35.3448, 29.3727, 41.7002, 23.4145, 41.7002, -35.3729, 36.5364, -42.9199, 26.6061, -41.7283, 23.0312, -46.0976, -23.5123, -45.9756, -28.2788, -42.0035 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Trampa" parent="." instance=ExtResource( 25 )]
+position = Vector2( 753.803, 407.514 )
+
+[node name="Trampa2" parent="." instance=ExtResource( 25 )]
+position = Vector2( 861.189, 338.742 )
+
+[node name="Trampa3" parent="." instance=ExtResource( 25 )]
+position = Vector2( 822.522, 477.334 )
+
+[node name="Trampa4" parent="." instance=ExtResource( 25 )]
+position = Vector2( 719.051, 178.346 )
+
+[node name="Trampa5" parent="." instance=ExtResource( 25 )]
+position = Vector2( 854.338, 225.693 )
+
+[node name="Trampa6" parent="." instance=ExtResource( 25 )]
+position = Vector2( 473.774, 247.948 )
+
+[node name="Trampa7" parent="." instance=ExtResource( 25 )]
+position = Vector2( 648.189, 264.642 )
+
+[node name="Trampa8" parent="." instance=ExtResource( 25 )]
+position = Vector2( 367.94, 437.542 )
+
+[node name="Trampa9" parent="." instance=ExtResource( 25 )]
+position = Vector2( 667.939, 510.173 )
+
+[node name="Trampa10" parent="." instance=ExtResource( 25 )]
+position = Vector2( 511.182, 446.956 )
+
+[node name="Final2" type="Area2D" parent="."]
+editor/display_folded = true
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Final2"]
+position = Vector2( 933.813, 512.354 )
+scale = Vector2( 0.0101047, 0.0126211 )
+texture = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Final2"]
+polygon = PoolVector2Array( 930.041, 505.82, 940.556, 505.569, 940.556, 518.337, 927.037, 518.587, 927.288, 505.82 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
+script = ExtResource( 29 )
+[connection signal="body_entered" from="Destral1/PathFollow2D/Destral" to="KinematicBody2D" method="_on_Destral_body_entered"]
+[connection signal="body_entered" from="Destral2/PathFollow2D/Destral" to="KinematicBody2D" method="_on_Destral_body_entered"]
+[connection signal="body_entered" from="Trampa" to="KinematicBody2D" method="_on_Trampa_body_entered"]
+[connection signal="body_entered" from="Trampa" to="Trampa" method="_on_Trampa_body_entered"]
+[connection signal="body_entered" from="Trampa2" to="KinematicBody2D" method="_on_Trampa2_body_entered"]
+[connection signal="body_entered" from="Trampa2" to="Trampa2" method="_on_Trampa2_body_entered"]
+[connection signal="body_entered" from="Trampa3" to="KinematicBody2D" method="_on_Trampa3_body_entered"]
+[connection signal="body_entered" from="Trampa3" to="Trampa3" method="_on_Trampa3_body_entered"]
+[connection signal="body_entered" from="Trampa4" to="KinematicBody2D" method="_on_Trampa4_body_entered"]
+[connection signal="body_entered" from="Trampa4" to="Trampa4" method="_on_Trampa4_body_entered"]
+[connection signal="body_entered" from="Trampa5" to="KinematicBody2D" method="_on_Trampa5_body_entered"]
+[connection signal="body_entered" from="Trampa5" to="Trampa5" method="_on_Trampa5_body_entered"]
+[connection signal="body_entered" from="Trampa6" to="KinematicBody2D" method="_on_Trampa6_body_entered"]
+[connection signal="body_entered" from="Trampa6" to="Trampa6" method="_on_Trampa6_body_entered"]
+[connection signal="body_entered" from="Trampa7" to="KinematicBody2D" method="_on_Trampa7_body_entered"]
+[connection signal="body_entered" from="Trampa7" to="Trampa7" method="_on_Trampa7_body_entered"]
+[connection signal="body_entered" from="Trampa8" to="KinematicBody2D" method="_on_Trampa8_body_entered"]
+[connection signal="body_entered" from="Trampa8" to="Trampa8" method="_on_Trampa8_body_entered"]
+[connection signal="body_entered" from="Trampa9" to="KinematicBody2D" method="_on_Trampa9_body_entered"]
+[connection signal="body_entered" from="Trampa9" to="Trampa9" method="_on_Trampa9_body_entered"]
+[connection signal="body_entered" from="Trampa10" to="KinematicBody2D" method="_on_Trampa10_body_entered"]
+[connection signal="body_entered" from="Trampa10" to="Trampa10" method="_on_Trampa10_body_entered"]
+[connection signal="body_entered" from="Final2" to="Final2" method="_on_Final1_body_entered"]
